@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: Property Management System
+  datasource:
+    username: root
+    password: rush1234
+    url: jdbc:mysql://localhost:3306/real2  # Updated for MySQL
+    driver-class-name: com.mysql.cj.jdbc.Driver  # Added for MySQL
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect  # Updated for MySQL
+        format_sql: false
+    show-sql: true
+    defer-datasource-initialization: true
+    generate-ddl: true
+  sql:
+    init:
+      mode: always
+  mail:
+    host: sandbox.smtp.mailtrap.io
+    port: 2525
+    username: 6f8d6b84a07054
+    password: 12f15b319102c2
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  email:
+    sender: notifications@nexthome.com
+server:
+  port: 8080
